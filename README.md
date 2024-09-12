@@ -39,7 +39,7 @@ WHERE `cfu` > 10;
 
 3. Selezionare tutti gli studenti che hanno più di 30 anni
 
-SELECT `name`,`surname`,`date_of_birth`
+SELECT \*
 FROM `students`
 WHERE FLOOR(DATEDIFF(CURRENT_DATE, `date_of_birth`) / 365) > 30;
 
@@ -58,7 +58,7 @@ AND `year` = 1;
 5. Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del
    20/06/2020 (21)
 
-SELECT `date`, `hour`
+SELECT \*
 FROM `exams`
 WHERE `date` = '2020-06-20'
 AND `hour` >= '14:00';
@@ -67,7 +67,7 @@ AND `hour` >= '14:00';
 
 6. Selezionare tutti i corsi di laurea magistrale (38)
 
-SELECT `level`
+SELECT \*
 FROM `degrees`
 WHERE `level` = 'magistrale';
 
@@ -75,14 +75,14 @@ WHERE `level` = 'magistrale';
 
 7. Da quanti dipartimenti è composta l'università? (12)
 
-SELECT `name`
+SELECT \*
 FROM `departments`;
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 
-SELECT `phone`
+SELECT \*
 FROM `teachers`
 WHERE `phone` IS NULL;
 
